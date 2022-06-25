@@ -4,4 +4,5 @@
 
 Video link- [https://www.youtube.com/watch?v=yTujhdqgCzo&t=14s]
 
-https://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/
+![image](https://user-images.githubusercontent.com/79306021/175761532-b661568e-f45d-49a9-b328-08e806842f70.png)
+
