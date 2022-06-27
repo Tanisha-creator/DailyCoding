@@ -1,0 +1,52 @@
+https://leetcode.com/problems/merge-two-sorted-lists/
+
+Approach 1 : create a new list and merge two lists in a sorted way
+TC=O(n)
+SC=O(n)
+
+class Solution {
+public:
+    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
+	// create a dummy node
+        ListNode* dummy=new ListNode(0);
+	// ans pointing to dummy will help in returning answer at the end
+        ListNode* ans = dummy;
+		
+	//if list1 is empty list2 is the final answer
+        if(list1==NULL)
+            return list2;
+	//if list2is empty list1 is the final answer
+        if(list2==NULL)
+            return list1;
+	
+	//while both the lists are not NULL
+        while(list1&&list2){
+            if(list1->val <= list2->val){
+            dummy->next = list1;
+            list1 = list1->next;
+            dummy = dummy->next;
+        }
+        else{
+            dummy->next = list2;
+            list2 = list2->next;
+            dummy=dummy->next;
+        }
+        }
+        while(list1){
+            dummy->next=list1;
+            list1=list1->next;
+            dummy=dummy->next;
+        }
+        while(list2){
+            dummy->next=list2;
+            list2=list2->next;
+            dummy=dummy->next;
+        }
+        return ans->next;
+    }
+};
+
+Approach 2 : Break the links ans set the links in such a way 
+that thay are a single list in sorted way (in place solution)
+TC=O(n)
+SC=O(1)
