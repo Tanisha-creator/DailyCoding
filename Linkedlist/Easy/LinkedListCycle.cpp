@@ -35,3 +35,23 @@ public:
         }return false;
     }
 };*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n=123;
+    int obv=n;
+    int ans=0;
+    //cout<<obv<<" ";
+    while(n>0){
+        int rem=n%10;
+        ans = (ans*10)+rem;
+        n=n/10;
+        cout<<n<<" ";
+        cout<<ans<<" ";
+    }
+    if(obv==ans)
+    cout<<"yes";
+    else
+    cout<<"no";
+}
